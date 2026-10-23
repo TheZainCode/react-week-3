@@ -1,6 +1,13 @@
+import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
+import Register from "./pages/Register";
 function App(){
   return(
-    <h1 className="text-3xl font-bold text-blue-600 justify-center items-center p-6 flex mt-80">Zain Aslam</h1>
+  <BrowserRouter>
+  <Routes>
+    <Route path="/" element={<Navigate to="/register" replace />} />
+    <Route path="/register" element={<Register />} />
+  </Routes>
+  </BrowserRouter>
   )
 }
-export default App
+export default App;
